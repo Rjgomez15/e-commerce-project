@@ -6,7 +6,7 @@ import './productCartInfo.css'
 const ProductCartInfo = ({product, getAllProductsCart}) => {
 
   const handleDeleteProduct = () => {
-    const URL = `https://ecommerce-api-react.herokuapp.com/api/v1/cart/${product.id}`
+    const URL = `https://e-commerce-api.academlo.tech/api/v1/cart/${product.id}`
     axios.delete(URL, getConfig())
       .then(() => getAllProductsCart())
       .catch(err => console.log(err))
